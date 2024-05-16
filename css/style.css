@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    height: 11vh;
+    background-color: #b45f8a72;
+}
+
+.main ul {
+    display: flex;
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 23px;
+    margin-top: 44px;
+    font-weight: 700;
+    margin-left: 9%;
+    font-family: "Nunito", sans-serif;
+
+}
+
+
+
+.main ul li a {
+    text-decoration: none;
+    color: #181818;
+    padding: 20px 34px;
+    transition: 0.9 ease;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.main ul li a:hover {
+    background-color: #c2538b;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.main ul li.active a {
+    background-color: #c2538b;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.logo img {
+    float: left;
+    width: 400px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 200px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.panouri img {
+    width: 650px;
+    height: 450px;
+
+
+}
+
+.panouri {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+}
+
+.mama {
+    font-family: "Nunito", sans-serif;
+    margin-top: 15px;
+    margin-left: 23%;
+    margin-right: 23%;
+    color: #181818;
+}
+
+.mama table {
+    border-collapse: collapse;
+    font-family: "Nunito", sans-serif;
+
+
+}
+
+.mama table,
+th,
+td {
+    padding: 12px;
+
+}
+
+.mama th {
+    background-color: #c2538b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #b45f8a72;
+}
+
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 22px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-height: 20vh;
+}
+
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card iframe {
+    margin-top: 12px;
+    border-radius: 30px;
+    margin-left: 5%;
+
+}
+
+
+
+
+
+.titlu {
+    background-color: #c2538b;
+    color: #fff;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.titlu h2 {
+    margin-left: 25px;
+}
+
+.card p {
+    float: right;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.colaj {
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 22px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-height: 20vh;
+}
+
+
+.colaj:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.colaj img {
+    width: 520px;
+    height: 400px;
+    padding: 12px;
+    border-radius: 8%;
+    padding-top: 10px;
+    margin-left: 20px;
+
+}
+
+.colaj img:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+
+@keyframes animatie-imagini {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 200px;
+        opacity: 1;
+    }
+}
+
+.panouri img {
+    animation-name: animatie-imagini;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    min-height: 20vh;
+    padding: 20px;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 18%;
+    margin-right: 18%;
+
+}
+
+details {
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #b45f8a72;
+    border-bottom: none;
+    font-family: "Nunito", sans-serif;
+
+    padding: 3px;
+
+}
+
+#exceptie {
+    border-bottom: 1px solid black;
+}
+
+.sfaturi ul li {
+    padding: 5px;
+
+}
+
+.sfaturi ol li {
+    margin-left: 23px;
+    padding-bottom: 5px;
+    font-size: 19px;
+
+}
+
+summary {
+    padding: 10px 15px;
+    font-size: 23px;
+    color: white;
+    background-color: #c2538b;
+
+}
+
+
+
+
+.sfaturi ul {
+    list-style-type: none;
+}
+
+
+.sport-studenti img {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    border-radius: 6%;
+
+}
+
+
+
+
+
+.sport-studenti img:hover {
+    transform: translateY(-3px);
+}
+
+.sport-studenti iframe {
+    margin-top: 12px;
+    border-radius: 30px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+
+#sfaturi5 ol,
+li {
+    margin-left: 30px;
+    padding-bottom: 5px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+
+#sfaturi5 {
+    padding: 10px 25px;
+}
+
+#sfaturi5 li {
+    margin-bottom: 10px;
+}
+
+#sfaturi5 a {
+    text-decoration: none;
+    color: #181818;
+}
+
+#sfaturi5 a:hover {
+    padding: 6px 8px;
+    background-color: #c2538b;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+#primulsfat p {
+    padding: 0 30px;
+    font-size: 23px;
+}
+
+#doileasfat p {
+    padding: 0 30px;
+    font-size: 23px;
+}
+
+#treileasfat p {
+    padding: 0 30px;
+    font-size: 23px;
+}
+
+#patruleasfat p {
+    padding: 0 30px;
+    font-size: 23px;
+}
+
+#patruleasfat ul,
+li {
+    font-weight: normal;
+}
+
+#patruleasfat ul {
+    margin-left: 30px;
+}
+
+#patruleasfat a {
+    color: black;
+}
+
+#cincileasfat p {
+    padding: 0 30px;
+    font-size: 23px;
+}
+
+#regula1 img {
+    width: 90%;
+    margin-left: 6%;
+}
+
+#regula2 img {
+    width: 50%;
+    height: 800px;
+    margin-left: 25%;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #b45f8a72;
+    color: black;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 18px;
+}
+
+
+#backToTopBtn:hover {
+    background-color: #c2538b;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#backToTopBtn:active {
+    background-color: #903361;
+    transform: translateY(2px);
+}

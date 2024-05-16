@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>mod-sanatos-de-viata</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/free-icon-diet-1717172.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+        .container {
+            font-family: "Nunito", sans-serif;
+            margin-top: 25px;
+            margin-left: 20%;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        .form-group .gender-selection {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group .gender-selection button {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #c2538b;
+            background-color: #b45f8a72;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .form-group .gender-selection button.active {
+            background-color: #c2538b;
+            color: white;
+        }
+
+        .form-group .gender-selection button:hover {
+            background-color: #c2538b;
+            color: white;
+        }
+
+        button {
+            background-color: #b45f8a72;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #c2538b;
+            color: white;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="main">
+
+            <ul>
+                <li><i></i><a href="../index.html">Home</a></li>
+                <li><a href="dieta.html">Dietă</a></li>
+                <li><a href="igiena.html">Igienă</a></li>
+                <li><a href="studenti.html">Studenți</a></li>
+                <li class="active"><a href="test.html">Test</a></li>
+
+            </ul>
+
+
+        </div>
+
+
+    </header>
+    <div class="mama">
+        <div class="container">
+            <h2>Calculator IMC</h2>
+            <div class="form-group">
+                <label>Selecteaza genul</label>
+                <div class="gender-selection">
+                    <button id="female" onclick="selectGender('female')">♀ Femeie</button>
+                    <button id="male" onclick="selectGender('male')">♂ Bărbat</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="weight">Greutatea în kg</label>
+                <input type="text" id="weight" placeholder="Introduceți greutatea în kg">
+            </div>
+            <div class="form-group">
+                <label for="height">Înălțimea în cm</label>
+                <input type="text" id="height" placeholder="Introduceți înălțimea în cm">
+            </div>
+            <button onclick="calculateBMI()">CALCULEAZĂ</button>
+            <div class="result" id="bmiResult"></div>
+            <div class="description" id="bmiDescription"></div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://ms.gov.md/" target="_blank"><img width='250' src="../images/ministerul-sanatatii.jpg"></a>
+        <a href="https://gov.md/ro" target="_blank"><img width='250'
+                src="https://gov.md/sites/default/files/aderarea%20la%20UE%20cover/gov-ue.PNG"></a>
+        <a href="https://www.who.int/" target="_blank"><img width='200'
+                src="https://youth.md/wp-content/uploads/2021/07/1-2-1.png"></a>
+        <a href="https://mec.gov.md/" target="_blank"><img width='450'
+                src="https://www.lhr.md/wp-content/uploads/2018/04/Ministerul-Educatiei-636x318.png"></a>
+
+    </footer>
+
+    <script>
+
+        let selectedGender = '';
+
+        function selectGender(gender) {
+            selectedGender = gender;
+            document.getElementById('female').classList.remove('active');
+            document.getElementById('male').classList.remove('active');
+            document.getElementById(gender).classList.add('active');
+        }
+
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const heightCm = parseFloat(document.getElementById('height').value);
+            const heightM = heightCm / 100;
+
+            if (!selectedGender || isNaN(weight) || isNaN(heightM) || weight <= 0 || heightM <= 0) {
+                document.getElementById('bmiResult').textContent = 'Introduceți date valide.';
+                document.getElementById('bmiDescription').textContent = '';
+                return;
+            }
+
+            const bmi = (weight / (heightM * heightM)).toFixed(2);
+            let description = '';
+
+            if (bmi < 18.5) {
+                description = 'Subponderal';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                description = 'Masă corporală normală';
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                description = 'Supraponderal';
+            } else {
+                description = 'Obez';
+            }
+
+            document.getElementById('bmiResult').textContent = `Indicele este: ${bmi} ${description}`;
+            document.getElementById('bmiDescription').textContent = getDescription(description);
+        }
+
+        function getDescription(description) {
+            switch (description) {
+                case 'Subponderal':
+                    return 'Masa corporală este sub normal. Este recomandat să consultați un medic pentru a evalua starea de sănătate și a primi sfaturi adecvate pentru creșterea în greutate.';
+                case 'Masă corporală normală':
+                    return 'Masa corporală este normală. Ține o dietă bogată în fructe și legume, alături de un program zilnic mișcare pentru a menține o formă bună.';
+                case 'Supraponderal':
+                    return 'Masa corporală este peste normal. Încercați să adoptați o dietă echilibrată și să faceți exerciții fizice regulate pentru a reduce greutatea corporală.';
+                case 'Obez':
+                    return 'Masa corporală este mult peste normal. Este recomandat să consultați un medic pentru a evalua starea de sănătate și a primi sfaturi adecvate pentru pierderea în greutate.';
+                default:
+                    return '';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

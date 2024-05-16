@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>mod-sanatos-de-viata</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/free-icon-diet-1717172.png">
+
+
+
+    <style>
+  
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="main">
+
+            <ul>
+                <li class="active"><i></i><a href="index.html">Home</a></li>
+                <li><a href="pages/dieta.html">Dietă</a></li>
+                <li><a href="pages/igiena.html">Igienă</a></li>
+                <li><a href="pages/studenti.html">Studenți</a></li>
+                <li><a href="pages/test.html">Test</a></li>
+
+            </ul>
+
+
+        </div>
+
+
+
+    </header>
+    <div class="panouri">
+        <img src="https://i.pinimg.com/736x/f2/9f/4d/f29f4d0ca32b59970f5d5030e0ee721b.jpg">
+        <img src="https://news.harvard.edu/wp-content/uploads/2018/04/healthy-habits.jpg">
+        <img src="https://divineyouwellness.com/wp-content/uploads/2021/09/feature.jpg">
+
+
+
+    </div>
+    </div>
+    <div class="mama">
+        <h2>CUM SĂ-ȚI PROTEJEZI SĂNĂTATEA?</h2>
+        <table>
+            <tr>
+                <th>Sfaturi</th>
+                <th>Descriere</th>
+            </tr>
+            <tr>
+                <td><b>Evitați sedentarismul!</b></td>
+                <td>Încadrați sportul regulat, dar puțin intesiv (mersul sau alergarea) în regimul Dumneavoastră, făceți
+                    gimnastică în fiecare dimineață, astfel se menține mobilitatea sistemului locomotor și tonicitatea
+                    musculară.</td>
+            </tr>
+            <tr>
+                <td><b>Alimentație echilibrată</b></td>
+                <td>Consumați alimente bogate în vitamine și aminoacizi nesaturați.</td>
+            </tr>
+            <tr>
+                <td><b>Hidratați-vă!</b></td>
+                <td>Beați cel puțin 2 litri de apă pe zi, pentru a asigura funcționarea normală a sistemului excretor
+                </td>
+            </tr>
+            <tr>
+                <td><b>Evitați alcoolul și fumatul!</b></td>
+                <td>Sunt obiceiuri care aduc pagube organismului, provocând ateroscleroza vaselor sangvine, ulterior
+                    formarea trombelor.</td>
+            </tr>
+            <tr>
+                <td><b>Preveniți stresul!</b></td>
+                <td>Poate duce la supraalimentație și creșterea masei corporale, iar tulburările emoționale frecvente
+                    pot deveni cronice, afectând sistemul endocrin prin dereglări hormonale.</td>
+            </tr>
+            <td><b>Vizitați regulat medicul!</b></td>
+            <td>Medicul poate identifica și trata problemele de sănătate în stadiile incipiente și monitoriza dinamica
+                stării tale de sănătate.</td>
+            </tr>
+            <td><b>Respectă igiena!</b></td>
+            <td> Spălarea regulată a mâinilor, igiena orală și corporală, poate preveni pătrunderea infecțiilor în
+                mediul intern a organismului.</td>
+            </tr>
+
+
+        </table>
+        <div class="card">
+            <div class="titlu">
+                <h2>VIDEO SUPORT</h2>
+            </div>
+            <iframe width="90%" height="600" src="https://www.youtube.com/embed/W0MufXBFqhc?si=n4PkYvfkSyN8lz0b"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
+        </div>
+        <div class="colaj">
+            <div class="titlu">
+                <h2>IMAGINI</h2>
+            </div>
+            <a href="https://www.betterhealth.vic.gov.au/health/healthyliving/cycling-health-benefits"
+                target="_blank"><img
+                    src="https://my.vanderbilthealth.com/wp-content/uploads/2018/02/BikingFamilyGettyImages-463245027.jpg"></a>
+            <a href="https://www.nhs.uk/live-well/eat-well/how-to-eat-a-balanced-diet/eight-tips-for-healthy-eating/"
+                target="_blank"><img
+                    src="https://www.quinuareal.bio/noticias-quinua/fotos/10-habitos-saludables-para-el-dia-a-dia-1625813652.jpg"></a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://ms.gov.md/" target="_blank"><img width='250' src="images/ministerul-sanatatii.jpg"></a>
+        <a href="https://gov.md/ro" target="_blank"><img width='250'
+                src="https://gov.md/sites/default/files/aderarea%20la%20UE%20cover/gov-ue.PNG"></a>
+        <a href="https://www.who.int/" target="_blank"><img width='200'
+                src="https://youth.md/wp-content/uploads/2021/07/1-2-1.png"></a>
+        <a href="https://mec.gov.md/" target="_blank"><img width='450'
+                src="https://www.lhr.md/wp-content/uploads/2018/04/Ministerul-Educatiei-636x318.png"></a>
+
+    </footer>
+    <button id="backToTopBtn" onclick="scrollToTop()"><img width="40"src="images/free-icon-up-arrow-angle-54817.png"></button>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function () {
+            const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition > (documentHeight - windowHeight) / 2) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
